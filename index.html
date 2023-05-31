@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+
+<body>
+<!--desktop display flex container-->
+<div class="desktop__row">
+
+  <header class="header">
+    <div class="container">
+      <!--Card back-->
+        <div class="card__back card">
+          <div class="card__back--container">
+            <p class="card__back--cvc credentials">000</p>
+          </div>
+        </div>
+
+    <!--Card front details-->
+      <div class="card__front card">
+        <div class="container">
+            <img class="card__front--logo" src="./images/card-logo.svg" alt="card logo">
+            
+              <p class="card__front--digits credentials">0000 0000 0000 0000</p>
+            <div class="card__front--bottom row">
+              <p class="card__front--name credentials">Jane Appleseed</p>
+              <p class="card__front--date credentials">
+              <span class="card__front--month">00</span>/<span class="card__front--year">00</span> 
+              </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="main container">
+  <!--Card name-->
+    <div class="main__form">  
+        <label for="fname">Cardholder Name</label><br>
+        <input type="text" id="fname" name="fname" placeholder="e.g. Jane Appleseed"><br>
+        <p class="name__error error  hidden">Wrong format, text only</p>
+
+  <!--card number-->
+        <label for="fnumber">Card Number</label><br>
+        <input type="text" id="fnumber" class="number" name="fnumber" maxlength="16" placeholder="e.g. 1234 5678 9123 0000"><br>
+        <p class="number__error error hidden">Wrong format, numbers only</p>
+
+    <!--date + cvc labels/input-->
+      <div class="row">
+
+        <div class="exp__date display__column">
+            <label for="fmonth">Exp.Date(MM/YY)</label>
+          <div class="row exp__date--input">
+            <input type="text" id="fmonth" name="fmonth" class="number"  placeholder="MM" maxlength="2">
+            <input type="text" id="fyear" name="fyear" class="number" placeholder="YY"  maxlength="2">
+          </div>
+            <p class="date__error--month error hidden">Wrong format or blank</p>
+            <p class="date__error--year error hidden">Wrong format or blank</p>
+        </div>
+
+
+          <div class="cvc display__column">
+            <label for="fcvc">cvc</label>
+            <input type="text" id="fcvc" name="fcvc" class="number" placeholder="e.g. 123" maxlength="3">
+            <p class="date__error--cvc error hidden">Wrong format or blank</p>
+          </div>  
+      </div>
+            <button class="button" id="button">Confirm</button>
+    </div>
+
+
+  <!--completed section-->
+    <section class="complete container">
+      <img src="./images/icon-complete.svg" alt="check mark" class="complete__logo">
+      <h2 class="complete__title">Thank you!</h2>
+      <p class="complete__text">we've added your card details</p>
+      <button class="button" id="continue">Continue</button>
+    </section>
+
+  </main>
+
+</div>
+ 
+
+ 
+
+
+  
+<script src="main.js"></script>
+</body>
+</html>
